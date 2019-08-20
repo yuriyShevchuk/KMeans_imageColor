@@ -1,4 +1,4 @@
-from classes.imageProcessing import ReduceColors
+from utils.imageProcessing import ReduceColors
 
 imgProcessing = ReduceColors()
 X_train, m, n = imgProcessing.get_train_data_fromImage('./data/parrots.jpg')
@@ -14,4 +14,4 @@ imgProcessing.show_image(X_shr_median, flat=True, **params)
 
 #------- findind min number of clusters with more then 20 psnr error (mean and median colors)
 min_clus = imgProcessing.get_min_clusters_for_psnr(X_train, 20)
-print(f'min clusters is: {min_clus}')
+print(f'min number of clusters is: {min_clus}')
